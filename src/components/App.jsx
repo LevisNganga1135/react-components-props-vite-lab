@@ -9,9 +9,17 @@ console.log(blogData);
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <About image={blogData.image} about={blogData.about} />
-      <ArticleList posts={blogData.posts} />
+      <header>
+        <Header name={blogData.name} />
+      </header>
+
+      <aside>
+        <About image={blogData.image} about={blogData.about} />
+      </aside>
+
+      <main>
+        <ArticleList posts={blogData.posts} />
+      </main>
     </div>
   );
 }
